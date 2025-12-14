@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+
+ body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+}
+
+ 
+
+ .main-container {
+  max-width: 935px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+.comment-list-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .comment {
+    display: flex;
+    align-items: flex-start;
+    padding: 6px 0;
+  }
+  
+  .comment-author {
+    font-weight: 600;
+    margin-right: 5px;
+    color: #262626;
+    text-decoration: none;
+  }
+  
+  .comment-text {
+    color: #262626;
+  }
+  
+  .no-comments {
+    color: #8e8e8e;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .loading-comments {
+    text-align: center;
+    padding: 20px;
+    color: #8e8e8e;
+  }
+  .add-comment-form {
+    display: flex;
+    border-top: 1px solid #efefef;
+    padding: 8px 16px;
+  }
+  
+  .add-comment-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .add-comment-button {
+    border: none;
+    background: none;
+    color: #0095f6;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .add-comment-button:disabled {
+    color: #b2dffc;
+    cursor: default;
+  }
+  .register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  
+  .register-form {
+    width: 350px;
+    padding: 40px;
+    border: 1px solid #dbdbdb;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .register-form h2 {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  
+  .register-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    background-color: #fafafa;
+    box-sizing: border-box;
+  }
+  
+  .register-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #0095f6;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .register-form button:disabled {
+    background-color: #b2dffc;
+  }
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  
+  .login-form {
+    width: 350px;
+    padding: 40px;
+    border: 1px solid #dbdbdb;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .login-form h2 {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    background-color: #fafafa;
+    box-sizing: border-box;  
+  }
+  
+  .login-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #0095f6;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .login-form button:disabled {
+    background-color: #b2dffc;
+  }
+  .post-card {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  
+  .post-header {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    font-weight: 600;
+  }
+  
+  .post-header .username {
+    color: #262626;
+    text-decoration: none;
+  }
+  
+  .post-image-container {
+    width: 100%;
+  }
+  
+  .post-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .post-actions {
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;  
+    padding: 0;
+    margin-right: 12px;
+  }
+  
+  .action-button.like-button svg {
+    fill: #262626;  
+  }
+  
+  .action-button.like-button.liked svg {
+    fill: #ed4956;
+  }
+  
+  .likes-count {
+    font-weight: 600;
+    padding: 0 16px;
+    margin-bottom: 8px;
+  }
+  
+  .post-caption {
+    padding: 0 16px;
+    margin-bottom: 8px;
+  }
+  
+  .post-caption .username {
+    font-weight: 600;
+    margin-right: 5px;
+    color: #262626;
+    text-decoration: none;
+  }
+  
+  .toggle-comments {
+    background: none;
+    border: none;
+    color: #8e8e8e;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0 16px;
+    margin-bottom: 8px;
+  }
+  
+  .comments-section {
+    padding: 0 16px;
+  }
+  .home-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .feed {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .empty-feed-message {
+    text-align: center;
+    color: #8e8e8e;
+    margin-top: 50px;
+  }
+  
+  .loading-feed {
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold;
+  }
+  .navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 975px;
+    margin: 0 auto;
+  }
+  
+  .navbar-logo {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 28px;
+    color: #262626;
+    text-decoration: none;
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-link {
+    color: #262626;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+  }
+  
+  .navbar-link:hover {
+    color: #8e8e8e;
+  }
+  
+  .navbar-button {
+    background-color: transparent;
+    border: none;
+    color: #0095f6;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  
+  .navbar-button:hover {
+    color: #00376b;
+  }
+.search-page {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.search-container {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #262626;
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-button {
+  background-color: #0095f6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.search-button:hover {
+  background-color: #007bb5;
+}
+
+.search-loading, .no-results {
+  text-align: center;
+  color: #8e8e8e;
+  margin-top: 20px;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.user-card:last-child {
+  border-bottom: none;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #262626;
+  font-weight: 600;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 10px;
+  border: 1px solid #dbdbdb;
+}
+
+.follow-button {
+  background-color: #0095f6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.follow-button.unfollow {
+  background-color: #efefef;
+  color: #262626;
+  border: 1px solid #dbdbdb;
+}
+
+.follow-button:hover:not(.unfollow) {
+  background-color: #007bb5;
+}
+
+.follow-button.unfollow:hover {
+  background-color: #dbdbdb;
+}
+.create-post-page {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.create-post-container {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.create-post-container h2 {
+  margin-bottom: 20px;
+  color: #262626;
+}
+
+.create-post-form .form-group {
+  margin-bottom: 15px;
+}
+
+.create-post-input,
+.create-post-textarea {
+  width: calc(100% - 22px); 
+  padding: 10px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fafafa;
+  resize: vertical; 
+}
+
+.create-post-textarea {
+  min-height: 100px;
+}
+
+.image-preview-container {
+  margin-top: 15px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.image-preview {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.create-post-button {
+  background-color: #0095f6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.create-post-button:hover:not(:disabled) {
+  background-color: #007bb5;
+}
+
+.create-post-button:disabled {
+  background-color: #b2dffc;
+  cursor: default;
+}
+.post-page {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.post-page-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.back-to-feed-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #0095f6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-to-feed-link:hover {
+  text-decoration: underline;
+}
