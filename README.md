@@ -234,7 +234,7 @@ React state management
 Full-stack project architecture
 
 👨‍💻 Author
-Rishiraj Singh Rajput
+Yuvraj  Singh Tomar
 B.Tech – Computer Science (Data Science)
 Indore, India
 
